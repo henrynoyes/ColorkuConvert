@@ -9,12 +9,15 @@ parser = argparse.ArgumentParser(description='Convert Sudoku board into Colorku 
 parser.add_argument('filename', help='filename of sudoku board image, ex: daily_sudoku_1.jpg')
 parser.add_argument('-d', '--display', action='store_true', dest='display',
                     help='display Colorku board for 5s instead of saving image')
+parser.add_argument('-a', '--arry', action='store_true', dest='arry',
+                    help='print array of detected digits)
 
 if __name__ == '__main__':
 
     args = parser.parse_args()
     filename = args.filename
     display = args.display
+    arry = args.arry
 
     height = width = 450  # dimensions of the frames
 
@@ -27,6 +30,8 @@ if __name__ == '__main__':
         corners, board, color_board = extract_board(img, largest_contour)
         extracted_squares = extract_squares(board)  # list of each square (image)
         predicted_squares = predict_squares(extracted_squares)  # list of predicted values
+        if arry:
+            print(predicted_squares)
         predicted_squares_str = np.array2string(predicted_squares, max_line_width=85, separator='').strip('[]')
         solved = solve(predicted_squares_str)
 
