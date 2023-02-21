@@ -10,7 +10,7 @@ parser.add_argument('filename', help='filename of sudoku board image, ex: daily_
 parser.add_argument('-d', '--display', action='store_true', dest='display',
                     help='display Colorku board for 5s instead of saving image')
 parser.add_argument('-a', '--arry', action='store_true', dest='arry',
-                    help='print array of detected digits)
+                    help='print array of detected digits')
 
 if __name__ == '__main__':
 
