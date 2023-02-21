@@ -14,7 +14,7 @@ def init_model():
     :return: Sequential model with pre-trained weights.
     :rtype: tensorflow.keras.Sequential
     """
-    model = load_model('./resources/newmodel.h5', compile = False)
+    model = load_model('newmodel.h5', compile = False)
     return model
 
 # Model used for digit recognition.
