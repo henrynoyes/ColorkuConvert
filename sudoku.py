@@ -93,5 +93,5 @@ def search(values):
 def some(seq):
     "Return some element of seq that is true."
     for e in seq:
-        if e: return True
+        if e: return e
     return False

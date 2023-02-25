@@ -7,9 +7,9 @@ from sudoku import solve
 if __name__ == '__main__':
 
     filename = 'feb_5.jpg'
-    display = False
+    display = True
     arry = False
-
+    inc_solu = True
     height = width = 450  # dimensions of the frames
 
     img = cv2.imread(f'Sudokus/{filename}')
@@ -24,17 +24,28 @@ if __name__ == '__main__':
         if arry:
             print(predicted_squares)
         predicted_squares_str = np.array2string(predicted_squares, max_line_width=85, separator='').strip('[]')
-        solved = solve(predicted_squares_str)
+        solu = solve(predicted_squares_str)
 
-        if solved:
+        if solu:
             color_img = add_color(color_board, predicted_squares)
+            pos_arry = np.where(predicted_squares > 0, 0, 1)
+            solu_squares = [*map(int, solu.values())] * pos_arry
+            all_squares = predicted_squares + solu_squares
+            solu_img = add_color(color_board.copy(), all_squares)
+
             if display:
                 cv2.imshow('Colorku Board', color_img)
+                if inc_solu:
+                    cv2.imshow('Colorku Board Solution', solu_img)
                 cv2.waitKey(5000)
             else:
                 path = f'Colorkus/colored_{filename}'
                 cv2.imwrite(path, color_img)
                 print(f'\nComplete! Image stored in {path}')
+                if inc_solu:
+                    solu_path = f'Colorkus/SOLU_colored_{filename}'
+                    cv2.imwrite(solu_path, solu_img)
+                    print(f'\nand solution stored in {solu_path}')
         else:
             print(predicted_squares)
             print('\nno valid solution, check array for errors')
