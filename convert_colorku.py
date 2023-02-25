@@ -5,22 +5,22 @@ from functions import process_image, extract_largest_contour, extract_board, ext
 from sudoku import solve
 import argparse
 
-parser = argparse.ArgumentParser(description='Convert Sudoku board into Colorku board.')
+parser = argparse.ArgumentParser(description='Converts Sudoku board into Colorku board.')
 parser.add_argument('filename', help='filename of sudoku board image, ex: daily_sudoku_1.jpg')
+parser.add_argument('-s', '--solve', action='store_true', dest='inc_solu',
+                    help='include Colorku board solution')
 parser.add_argument('-d', '--display', action='store_true', dest='display',
-                    help='display Colorku board for 5s instead of saving image')
+                    help='display Colorku board(s) for 5s instead of storing')
 parser.add_argument('-a', '--arry', action='store_true', dest='arry',
                     help='print array of detected digits')
-parser.add_argument('-s', '--solve', action='store_true', dest='inc_solu',
-                    help='displays/stores Colorku board solution depending on display arg')
 
 if __name__ == '__main__':
 
     args = parser.parse_args()
     filename = args.filename
+    inc_solu = args.inc_solu
     display = args.display
     arry = args.arry
-    inc_solu = args.inc_solu
 
     height = width = 450  # dimensions of the frames
 

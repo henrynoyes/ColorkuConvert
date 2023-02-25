@@ -1,8 +1,12 @@
+import warnings
+warnings.filterwarnings('ignore')
 import os
 import cv2
 import numpy as np
 from tensorflow.keras.models import load_model
+from tensorflow.compat.v1.logging import set_verbosity, ERROR
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+set_verbosity(ERROR)
 
 # set colors for respective numbers dictated by index in lst
 color_lst = [(255, 255, 255), (39, 33, 193), (16, 116, 238), (2, 220, 235), (1, 192, 125),
