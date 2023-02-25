@@ -6,9 +6,9 @@ from sudoku import solve
 
 if __name__ == '__main__':
 
-    filename = 'daily2.jpg'
-    display = True
-    arry = True
+    filename = 'feb_5.jpg'
+    display = False
+    arry = False
 
     height = width = 450  # dimensions of the frames
 
