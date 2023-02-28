@@ -1,9 +1,9 @@
 import numpy as np
 import cv2
+import argparse
 from functions import process_image, extract_largest_contour, extract_board, extract_squares, \
     predict_squares, add_color
 from sudoku import solve
-import argparse
 
 parser = argparse.ArgumentParser(description='Converts Sudoku board into Colorku board.')
 parser.add_argument('filename', help='filename of sudoku board image, ex: daily_sudoku_1.jpg')
