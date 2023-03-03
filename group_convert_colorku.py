@@ -23,8 +23,8 @@ if __name__ == '__main__':
     arry = args.arry
 
     cwd = os.getcwd()
-    sud_dir = f'{cwd}\Sudokus'
-    cku_dir = f'{cwd}\Colorkus'
+    sud_dir = f'{cwd}/Sudokus'
+    cku_dir = f'{cwd}/Colorkus'
     sud_lst = [file.name for file in Path(sud_dir).iterdir()]
     cku_lst = [file.name for file in Path(cku_dir).iterdir()]
     height = width = 450  # dimensions of the frames
