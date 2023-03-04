@@ -2,7 +2,7 @@
 
 ## Description
 
-Converts Sudoku boards into Colorku boards. Uses a Tensorflow Keras model to perform Optical Character Recognition (OCR) on the digits of a Sudoku board. The Sudoku board image is processed using methods from OpenCV. The output Colorku board images are saved to Colorkus directory.
+Converts Sudoku boards into Colorku boards. Uses a Tensorflow Keras model to perform Optical Character Recognition (OCR) on the digits of a Sudoku board. The Sudoku board image is processed using methods from OpenCV. The output Colorku board images are saved to the Colorkus directory.
 
 ## Dependencies
 
