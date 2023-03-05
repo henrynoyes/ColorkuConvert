@@ -23,7 +23,7 @@ Converts all Sudoku boards placed in the Sudokus directory into Colorkus, first 
 ### Arguments
 
 - `filename`: filename of sudoku board image in Sudokus/, ex: daily_sudoku_1.jpg
-- `-h, --help`: displays help message
+- `-h, --help`: display help message
 - `-s, --solve`: include Colorku board solution
 - `-d, --display`:  display Colorku board(s) for 5s instead of storing to Colorkus/
 - `-a, --array`: print array of detected digits
