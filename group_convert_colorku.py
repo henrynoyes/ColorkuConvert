@@ -66,7 +66,7 @@ if __name__ == '__main__':
                     cv2.imwrite(path, color_img)
                     print(f'\nComplete! Image stored in {path}')
                     if inc_solu:
-                        solu_path = f'Colorkus/SOLU_colored_{filename}'
+                        solu_path = f'Solutions/SOLU_colored_{filename}'
                         cv2.imwrite(solu_path, solu_img)
                         print(f'\nand solution stored in {solu_path}')
             else:
