@@ -4,7 +4,7 @@
 
 ## Description
 
-Converts Sudoku boards into Colorku boards. Uses a Tensorflow Keras model to perform Optical Character Recognition (OCR) on the digits of a Sudoku board. The model was generated using data from [MNIST](https://en.wikipedia.org/wiki/MNIST_database), [TMNIST](https://www.kaggle.com/datasets/nimishmagre/tmnist-typeface-mnist), and custom sources. The Sudoku board image is processed using methods from OpenCV. The output Colorku board images are saved to the Colorkus directory.
+Converts Sudoku boards into [Colorku](https://www.colorku.com/) boards. Uses a Tensorflow model to perform Optical Character Recognition (OCR) on the digits of a Sudoku board. The model was generated using data from [MNIST](https://en.wikipedia.org/wiki/MNIST_database), [TMNIST](https://www.kaggle.com/datasets/nimishmagre/tmnist-typeface-mnist), and custom sources. The Sudoku board image is processed using methods from OpenCV. The output Colorku board images are saved to the Colorkus directory.
 
 ## Dependencies
 
